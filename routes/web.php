@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\FyearController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,11 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::view('/fyear', 'layouts.fyear');
 // Auth::routes();
+
+//Session
+Route::get('get-session', [SessionController::class, 'getSession']);
+Route::get('store-session', [SessionController::class, 'storeSession']);
+Route::get('delete-session', [SessionController::class, 'deleteSession']);

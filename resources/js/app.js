@@ -28,6 +28,7 @@ Vue.directive('mask', VueMaskDirective);
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('fyear-component', require('./components/FYearComponent.vue').default);
 import Example from './components/ExampleComponent'
+// mix.disableNotifications();
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
